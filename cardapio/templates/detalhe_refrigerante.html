@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detalhes_Refrigerantes</title>
+</head>
+<body>
+{% extends "index.html" %}
+
+{% block content %}
+  <h1>Comprador: {{ refrigerante.nome }}</h1>
+  <p><strong>Quantidade:</strong> {{ refrigerante.quantidade }}</p>
+  <p><strong>Endereço:</strong> {{ refrigerante.endereço }}</p>
+  <p><strong>Data da compra:</strong> {{ refrigerante.data}}</p>
+  <p><strong>Tipo de refrigerante:</strong>{{refrigerante.Tipo_Refrigerante}}</p>
+    <a class="btn btn-danger" href="/">Voltar</a>
+
+{% endblock %}
+</body>
+</html>

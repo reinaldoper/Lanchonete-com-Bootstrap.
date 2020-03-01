@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Compras</title>
+</head>
+<body>
+ {% extends "index.html"%}
+
+{% block content%}
+  <h1> Página de pedidos da lanchonete <em>D'hora</em></h1>
+  <p> Bem-vindo a sua Lancheria, um site desenvolvido pela <em> ConsulNet </em>! </p>
+  <h2> Conteúdo dinâmico </h2>
+  <p> A lanchonete possui os seguintes pedidos: </p>
+  <ul>
+    <li> <strong> Pastel: </strong> {{num_pastel}}--><a link="btn btn-primary" href="pasteis/">Acessar</a></li>
+    <li> <strong> Saladas: </strong> {{num_saladas}}--><a link="btn btn-primary" href="saladas/">Acessar</a> </li>
+    <li> <strong> Fritas: </strong> {{num_fritas}}--><a link="btn btn-primary" href="fritas/">Acessar</a> </li>
+    <li> <strong> Refrigerantes : </strong>{{num_refrigerantes}}--><a link="btn btn-primary" href="refrigerantes/">Acessar</a> </li>
+    <li> <strong> Suco : </strong>{{num_suco}}--><a link="btn btn-primary" href="sucos/">Acessar</a></li>
+      <li> <strong> Pizza : </strong>{{num_pizza}}--><a link="btn btn-primary" href="pizzas/">Acessar</a></li>
+  </ul>
+    <p>Você visitou está página {{ num_visits }}{% if num_visits == 1 %} vez.{% else %} vezes.{% endif %}.</p>
+    <a class="btn btn-danger" href="/">Voltar</a>
+ {% endblock%}
+</body>
+</html>

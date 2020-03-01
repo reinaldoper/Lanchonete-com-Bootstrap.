@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detalhes_Suco</title>
+</head>
+<body>
+{% extends "index.html" %}
+
+{% block content %}
+  <h1>Comprador: {{ suco.nome }}</h1>
+  <p><strong>Quantidade:</strong> {{ suco.quantidade }}</p>
+  <p><strong>Endereço:</strong> {{ suco.endereço }}</p>
+  <p><strong>Data da compra:</strong> {{ suco.data}}</p>
+  <p><strong>Tipo de suco:</strong>{{suco.Tipo_Suco}}</p>
+    <a class="btn btn-danger" href="/">Voltar</a>
+
+{% endblock %}
+</body>
+</html>
